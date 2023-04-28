@@ -36,7 +36,7 @@ function Contacto() {
                   </div>
                 </div>
               </Col>
-              <Col>
+              <Col className='pt-4 pt-md-0'>
                 <Formulario/>
               </Col>
             </Row>

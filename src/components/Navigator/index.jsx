@@ -6,13 +6,11 @@ function Navigator(args){
     const [logoVisible, setLogoVisible] = useState(true)
     const opt = ()=> {
         if(logoVisible){
-            return{
-                width:'320px'
-            }
+            return 'logo-grande'
+            
         }else{
-            return{
-                width:'120px'
-            }
+            return 'logo-chico'
+            
         }
     }
     const toggle = () => setIsOpen(!isOpen);
@@ -38,7 +36,7 @@ function Navigator(args){
     return(
         <div id="navigator">
             <Navbar expand="md" fixed="top" container={true} {...args}>
-                <NavbarBrand href="/"><img style={opt()} src={Logo} alt="logo-helechos"/></NavbarBrand>
+                <NavbarBrand href="/"><img className={opt()} src={Logo} alt="logo-helechos"/></NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="ms-auto" navbar>

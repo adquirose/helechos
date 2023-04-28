@@ -6,19 +6,9 @@ import Title from '../Title'
 // import Img3 from '../../assets/images/galeria/3.jpg'
 import 'photoswipe/dist/photoswipe.css'
 
-
 const MyGallery = () => (
   <Gallery>
-    <div
-      style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(3,1fr)',
-        gridGap: 12,
-        paddingTop:'40px',
-        paddingBottom:'40px',
-        justifyItems:'center'
-      }}
-    >
+    <div className='gallery-container'>
     <Item
       original="./src/assets/images/galeria/1.jpg"
       thumbnail="./src/assets/images/galeria/thumb/1.jpg"
@@ -26,7 +16,7 @@ const MyGallery = () => (
       height="576"
     >
       {({ ref, open }) => (
-        <img ref={ref} onClick={open} src="./src/assets/images/galeria/thumb/1.jpg" />
+        <img className="image-gallery" ref={ref} onClick={open} src="./src/assets/images/galeria/thumb/1.jpg" />
       )}
     </Item>
     <Item
@@ -36,7 +26,7 @@ const MyGallery = () => (
       height="576"
     >
       {({ ref, open }) => (
-        <img ref={ref} onClick={open} src="./src/assets/images/galeria/thumb/2.jpg" />
+        <img className="image-gallery" ref={ref} onClick={open} src="./src/assets/images/galeria/thumb/2.jpg" />
       )}
     </Item>
     <Item
@@ -46,7 +36,7 @@ const MyGallery = () => (
       height="576"
     >
       {({ ref, open }) => (
-        <img ref={ref} onClick={open} src="./src/assets/images/galeria/thumb/3.jpg" />
+        <img className="image-gallery" ref={ref} onClick={open} src="./src/assets/images/galeria/thumb/3.jpg" />
       )}
     </Item>
     <Item
@@ -56,7 +46,7 @@ const MyGallery = () => (
       height="576"
     >
       {({ ref, open }) => (
-        <img ref={ref} onClick={open} src="./src/assets/images/galeria/thumb/4.jpg" />
+        <img className="image-gallery" ref={ref} onClick={open} src="./src/assets/images/galeria/thumb/4.jpg" />
       )}
     </Item>
     <Item
@@ -66,7 +56,7 @@ const MyGallery = () => (
       height="576"
     >
       {({ ref, open }) => (
-        <img ref={ref} onClick={open} src="./src/assets/images/galeria/thumb/5.jpg" />
+        <img className="image-gallery" ref={ref} onClick={open} src="./src/assets/images/galeria/thumb/5.jpg" />
       )}
     </Item>
     <Item
@@ -76,7 +66,7 @@ const MyGallery = () => (
       height="576"
     >
       {({ ref, open }) => (
-        <img ref={ref} onClick={open} src="./src/assets/images/galeria/thumb/6.jpg" />
+        <img className="image-gallery" ref={ref} onClick={open} src="./src/assets/images/galeria/thumb/6.jpg" />
       )}
     </Item>
     <Item
@@ -86,7 +76,7 @@ const MyGallery = () => (
       height="576"
     >
       {({ ref, open }) => (
-        <img ref={ref} onClick={open} src="./src/assets/images/galeria/thumb/8.jpg" />
+        <img className="image-gallery" ref={ref} onClick={open} src="./src/assets/images/galeria/thumb/8.jpg" />
       )}
     </Item>
     <Item
@@ -96,7 +86,7 @@ const MyGallery = () => (
       height="576"
     >
       {({ ref, open }) => (
-        <img ref={ref} onClick={open} src="./src/assets/images/galeria/thumb/9.jpg" />
+        <img className="image-gallery" ref={ref} onClick={open} src="./src/assets/images/galeria/thumb/9.jpg" />
       )}
     </Item>
     <Item
@@ -106,7 +96,7 @@ const MyGallery = () => (
       height="576"
     >
       {({ ref, open }) => (
-        <img ref={ref} onClick={open} src="./src/assets/images/galeria/thumb/10.jpg" />
+        <img className="image-gallery" ref={ref} onClick={open} src="./src/assets/images/galeria/thumb/10.jpg" />
       )}
     </Item>
     </div>
