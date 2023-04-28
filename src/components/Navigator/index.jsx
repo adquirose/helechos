@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
-import Logo from '../../assets/images/logo.png'
+const PATH_LOGO= 'https://www.lanube360.com/temp-img-helechos/images/logo.png'
 function Navigator(args){
     const [isOpen, setIsOpen] = useState(false);
     const [logoVisible, setLogoVisible] = useState(true)
@@ -36,7 +36,7 @@ function Navigator(args){
     return(
         <div id="navigator">
             <Navbar expand="md" fixed="top" container={true} {...args}>
-                <NavbarBrand href="/"><img className={opt()} src={Logo} alt="logo-helechos"/></NavbarBrand>
+                <NavbarBrand href="/"><img className={opt()} src={PATH_LOGO} alt="logo-helechos"/></NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="ms-auto" navbar>
