@@ -8,7 +8,7 @@ import Title from '../Title'
   function MyMap(){
     const center={ lat:-34.612935, lng: -71.135840 }
     const position = { lat: -34.612935, lng: -71.135840 }
-    console.log(import.meta.env.VITE_GOOGLEMAPS_API_KEY)
+    
     const containerStyle = {
       height: '550px',
       width:'100%',
