@@ -8,6 +8,7 @@ import Title from '../Title'
   function MyMap(){
     const center={ lat:-34.612935, lng: -71.135840 }
     const position = { lat: -34.612935, lng: -71.135840 }
+    console.log(import.meta.env.VITE_GOOGLEMAPS_API_KEY)
     const containerStyle = {
       height: '550px',
       width:'100%',
@@ -16,7 +17,7 @@ import Title from '../Title'
     };
     const { isLoaded } = useJsApiLoader({
       id: 'google-map-script',
-      googleMapsApiKey: "AIzaSyBX-fT0cZLTKydQN_HFfeCfHKq_Um_4cSQ"
+      googleMapsApiKey: import.meta.env.VITE_GOOGLEMAPS_API_KEY
     })
   
     const [map, setMap] = useState(null)
