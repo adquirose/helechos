@@ -8,4 +8,6 @@ import LogoWhatsapp from "./LogoWhatsapp";
 import PhoneCall from "./PhoneCall";
 import Email from "./Email";
 import Pin3 from "./Pin3";
-export { Quote, LineChart, Drop, Road2, SquareMarker, GridInterface, LogoWhatsapp, PhoneCall, Email, Pin3 } 
+import Phone from "./Phone"
+
+export { Quote, LineChart, Drop, Road2, SquareMarker, GridInterface, LogoWhatsapp, PhoneCall, Email, Pin3, Phone } 

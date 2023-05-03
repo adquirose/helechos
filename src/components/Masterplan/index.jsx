@@ -3,7 +3,7 @@ import Title from '../Title'
 
 function Masterplan() {
   return (
-    <div id="masterplan" className='section'>
+    <div id="masterplan" className='section cd-section'>
         <Container>
             <Row className="d-flex justify-content-center">
                 <Title text="MASTERPLAN 360"/>

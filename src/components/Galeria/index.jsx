@@ -105,7 +105,7 @@ const MyGallery = () => (
 
 function Galeria() {
   return (
-    <div id="galeria" className='section'>
+    <div id="galeria" className='section cd-section'>
         <Container>
             <Row className="d-flex justify-content-center">
                 <Title text="GALERIA DE FOTOS"/>

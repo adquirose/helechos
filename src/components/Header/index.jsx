@@ -4,18 +4,18 @@ function Header() {
   return (
     <div className='header-container'>
       <div id="header">
-        <div style={{position:'absolute', bottom:'150px', width:'100%'}}>
+        <div className="header-msg-container">
           <Container>
             <Row>
-              <Col sm="10" md="6">
+              <Col sm="10" md="7">
                 <p>¡La parcela que siempre <span>soñaste!</span></p>
               </Col>
               <Col>
               </Col>
             </Row>
             <Row>
-              <div className='d-flex justify-content-center'>
-                <button onClick={()=> console.log('click')}>CONOCE MÁS</button>
+              <div className='d-flex justify-content-center' >
+                <a href="#proyecto"><button>CONOCE MÁS</button></a>
               </div>
             </Row>
           </Container>

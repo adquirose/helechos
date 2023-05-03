@@ -49,7 +49,7 @@ import Title from '../Title'
   }
 function Ubicacion() {
   return (
-    <div id="ubicacion" className="section bg-azul">
+    <div id="ubicacion" className="section bg-azul cd-section">
         <Container>
             <Row className="d-flex justify-content-center">
                 <Title text="UBICACIÓN"/>

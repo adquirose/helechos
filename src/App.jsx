@@ -5,18 +5,18 @@ import Masterplan from "./components/Masterplan"
 import Galeria from "./components/Galeria"
 import Ubicacion from "./components/Ubicacion"
 import Contacto from "./components/Contacto"
-
+import { BrowserRouter } from "react-router-dom"
 function App() {
   return(
-    <>
-      <Navigator/>
+    <BrowserRouter>
       <Header/>
+      <Navigator/>
       <Proyecto/>
       <Masterplan/>
       <Galeria/>
       <Ubicacion/>
       <Contacto/>
-    </>
+    </BrowserRouter>
     
   )
 }

@@ -1,31 +1,65 @@
 import { useState, useEffect } from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
-const PATH_LOGO= 'https://www.lanube360.com/temp-img-helechos/images/logo.png'
+import classNames from 'classnames';
+// const PATH_LOGO= 'https://www.lanube360.com/temp-img-helechos/images/logo.png'
+import LogoColor from '../../assets/images/logo.png'
+import LogoBlanco from '../../assets/images/logo-blanco.png'
+
 function Navigator(args){
     const [isOpen, setIsOpen] = useState(false);
-    const [logoVisible, setLogoVisible] = useState(true)
-    const opt = ()=> {
-        if(logoVisible){
-            return 'logo-grande'
-            
-        }else{
-            return 'logo-chico'
-            
-        }
-    }
+    const [colorNavbar, setColorNavbar] = useState('navbar-color');
+    const [logo, setLogo] = useState(LogoColor)
+
     const toggle = () => setIsOpen(!isOpen);
+    useEffect(() => {
+        const updateView = () => {
+            var contentSections = document.getElementsByClassName("cd-section");
+            var navigationItems = document
+              .getElementById("navigator-nav")
+              .getElementsByTagName("a");
+            
+            console.log(contentSections)
+            console.log(navigationItems)
+            for (let i = 0; i < contentSections.length; i++) {
+              var activeSection =
+                parseInt(navigationItems[i].getAttribute("data-number"), 10) - 1;
+              if (
+                contentSections[i].offsetTop - window.innerHeight / 2 <
+                  window.pageYOffset &&
+                contentSections[i].offsetTop +
+                  contentSections[i].scrollHeight -
+                  window.innerHeight / 2 >
+                  window.pageYOffset
+              ) {
+                navigationItems[activeSection].classList.add("activo");
+              } else {
+                navigationItems[activeSection].classList.remove("activo");
+              }
+            }
+          };
+      
+          window.addEventListener("scroll", updateView);
+          return function cleanup() {
+            // document.body.classList.remove("presentation-page");
+            window.removeEventListener("scroll", updateView);
+          };
+    });
+    
     useEffect(() => {
         const updateNavbarColor = () => {
           if (
             document.documentElement.scrollTop > 360 ||
             document.body.scrollTop > 360
           ) {
-            setLogoVisible(false);
+            setLogo(LogoBlanco);
+            setColorNavbar('navbar-white')
+
           } else if (
             document.documentElement.scrollTop < 359 ||
             document.body.scrollTop < 359
           ) {
-            setLogoVisible(true);
+            setLogo(LogoColor);
+            setColorNavbar('navbar-color')
           }
         };
         window.addEventListener("scroll", updateNavbarColor);
@@ -35,31 +69,31 @@ function Navigator(args){
       });
     return(
         <div id="navigator">
-            <Navbar expand="md" fixed="top" container={true} {...args}>
-                <NavbarBrand href="/"><img className={opt()} src={PATH_LOGO} alt="logo-helechos"/></NavbarBrand>
+            <Navbar className={classNames(colorNavbar)} expand="lg" fixed="top" color={colorNavbar} container={true} {...args}>
+                <NavbarBrand href="/"><img src={logo} alt="logo-helechos"/></NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
-                    <Nav className="ms-auto" navbar>
+                    <Nav id="navigator-nav" className="ms-auto" navbar>
                         <NavItem>
-                            <NavLink href="#proyecto">PROYECTO</NavLink>
+                            <NavLink data-number="1" href="#proyecto">PROYECTO</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="#masterplan">
+                            <NavLink data-number="2" href="#masterplan">
                                 MASTERPLAN360
                             </NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="#galeria">
+                            <NavLink data-number="3" href="#galeria">
                                 GALERÍA
                             </NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="#ubicacion">
+                            <NavLink data-number="4" href="#ubicacion">
                                 UBICACIÓN
                             </NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="#contacto">
+                            <NavLink data-number="5" href="#contacto">
                                 CONTACTO
                             </NavLink>
                         </NavItem>

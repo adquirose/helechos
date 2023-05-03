@@ -1,6 +1,6 @@
 import { Container, Row, Col} from 'reactstrap'
 import Title from '../Title'
-import { PhoneCall, LogoWhatsapp, Email, Pin3 } from '../Icons'
+import { Phone, LogoWhatsapp, Email, Pin3 } from '../Icons'
 function Formulario(){
   return(
     <form>
@@ -15,19 +15,19 @@ function Formulario(){
 }
 function Contacto() {
   return (
-    <div id="contacto" className='section pb-5'>
+    <div id="contacto" className='section pb-5 cd-section'>
         <Container>
             <Row className="d-flex justify-content-center">
                 <Title text="CONTACTO"/>
             </Row>
             <Row style={{marginTop:'40px'}}>
-              <Col>
+              <Col md="6" sm="12">
                 <div>
                   <span>¡Escribenos y <br/>te asesoramos!</span>
                   <div className='pt-4'>
                     <div className='pb-3 d-flex'>
                       <div style={{width:'75px', display:'flex', justifyContent:'space-between'}}>
-                        <PhoneCall/><LogoWhatsapp/>
+                        <Phone/><LogoWhatsapp/>
                       </div>
                       <a href='https://api.whatsapp.com/send/?phone=56991939661'>+569 9 1939661</a>
                     </div>
@@ -36,7 +36,7 @@ function Contacto() {
                   </div>
                 </div>
               </Col>
-              <Col className='pt-4 pt-md-0'>
+              <Col md="6" sm="12" className='pt-4 pt-md-0'>
                 <Formulario/>
               </Col>
             </Row>
