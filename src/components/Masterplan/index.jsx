@@ -9,7 +9,7 @@ function Masterplan() {
                 <Title text="MASTERPLAN 360"/>
             </Row>
             <Row>
-                <iframe src="https://www.lanube360.com/bajos-los-helechos/" title="masterplan"></iframe>
+                <iframe src="https://www.lanube360.com/bajos-los-helechos/" title="masterplan" allowFullScreen></iframe>
             </Row>
         </Container>
     </div>
