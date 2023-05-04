@@ -7,7 +7,7 @@ function Header() {
         <div className="header-msg-container">
           <Container>
             <Row>
-              <Col sm="10" md="7">
+              <Col sm="10" md="8">
                 <p>¡La parcela que siempre <span>soñaste!</span></p>
               </Col>
               <Col>

@@ -103,7 +103,7 @@ body {
 }
 #header .header-msg-container {
   position:absolute;
-   bottom:200px;
+  bottom:200px;
   width:100%;
 }
 #navigator a{
@@ -119,7 +119,7 @@ body {
   color:var(--color-white);
 }
 #proyecto .description{
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   padding-top: 30px;
 }
 #proyecto .message{
@@ -254,7 +254,12 @@ body {
 .navbar-white a{
   color:var(--color-azul) !important;
 }
-
+.logo-1x{
+  width: 100px;
+}
+.logo-3x{
+  width: 360px;
+}
 @media(max-width: 990px){
   .icons-container{
     display:grid;
@@ -274,11 +279,26 @@ body {
   }
 }
 @media (max-width: 420px) {
-  .logo-chico{
-    width: 80px;
+  .title{
+    font-size: 32px;
   }
-  .logo-grande{
-    width: 180px;
+  #header p{
+    font-size: 60px;
+    line-height: 1.2;
+  }
+  #header p span{
+    font-size: 60px;
+  }
+  #header .header-msg-container {
+    position:absolute;
+    bottom:50px;
+    width:100%;
+  }
+  .logo-1x{
+    width: 100px;
+  }
+  .logo-3x{
+    width: 150px;
   }
   .icons-container{
     display:grid;
@@ -293,6 +313,10 @@ body {
     grid-auto-flow: row;
     grid-auto-columns: 320px;
     grid-gap: 10px;
+  }
+  #proyecto .description{
+    font-size: 1.2rem;
+    padding-top: 30px;
   }
 }
 

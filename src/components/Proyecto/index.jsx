@@ -15,7 +15,7 @@ function Proyecto() {
                 <Title text="PROYECTO"/>
             </Row>
             <Row>
-                <Col sm="12" md="5">
+                <Col sm="12" md="5" className="pt-3 pt-md-0">
                     <img style={{width:'80px'}} src={Comillas} alt="comillas"/>
                     <p className="message">
                         Un lugar para vivir y también <br/>
@@ -28,8 +28,8 @@ function Proyecto() {
                         Entre el río Tinguiririca y cerros de árboles milenarios, 
                         parcelas agrícolas que cuentan con hermosos paisajes, 
                         en la Ruta del Vino Del Valle de Colchagua, a 18 kms de San Fernando y 
-                        20 kms de Santa Cruz.
-                        55 hectáreas, que darían un total de 73 parcelas de 5.000 metros.
+                        20 kms de Santa Cruz.<br/>
+                        <b>55 hectáreas</b>, que darían un total de 73 parcelas de 5.000 metros.
                         A minutos de viñas en producción, restaurantes, del Museo de Santa Cruz
                         y de la Hacienda del Huique y a 1 hora de Pichilemu.
                     </p>

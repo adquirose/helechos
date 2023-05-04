@@ -2,7 +2,6 @@
 import { useState, useCallback} from 'react'
 import { Container, Row } from 'reactstrap'
 import { GoogleMap, Marker, useJsApiLoader } from '@react-google-maps/api';
-import { defaultOptions } from './options';
 import Title from '../Title'
 
   function MyMap(){
@@ -18,6 +17,7 @@ import Title from '../Title'
     const { isLoaded } = useJsApiLoader({
       id: 'google-map-script',
       googleMapsApiKey: import.meta.env.VITE_GOOGLEMAPS_API_KEY
+      
     })
   
     const [map, setMap] = useState(null)
@@ -37,8 +37,8 @@ import Title from '../Title'
     return isLoaded ? (
         <GoogleMap
           mapContainerStyle={containerStyle}
-          options={defaultOptions}
-          zoom={14}
+          mapType="satellite"
+          zoom={17}
           onLoad={onLoad}
           onUnmount={onUnmount}
         >

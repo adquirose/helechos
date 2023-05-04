@@ -9,6 +9,7 @@ function Navigator(args){
     const [isOpen, setIsOpen] = useState(false);
     const [colorNavbar, setColorNavbar] = useState('navbar-color');
     const [logo, setLogo] = useState(LogoColor)
+    const [sizeLogo, setSizeLogo] = useState('logo-3x')
 
     const toggle = () => setIsOpen(!isOpen);
     useEffect(() => {
@@ -18,8 +19,6 @@ function Navigator(args){
               .getElementById("navigator-nav")
               .getElementsByTagName("a");
             
-            console.log(contentSections)
-            console.log(navigationItems)
             for (let i = 0; i < contentSections.length; i++) {
               var activeSection =
                 parseInt(navigationItems[i].getAttribute("data-number"), 10) - 1;
@@ -53,6 +52,7 @@ function Navigator(args){
           ) {
             setLogo(LogoBlanco);
             setColorNavbar('navbar-white')
+            setSizeLogo('logo-1x')
 
           } else if (
             document.documentElement.scrollTop < 359 ||
@@ -60,6 +60,7 @@ function Navigator(args){
           ) {
             setLogo(LogoColor);
             setColorNavbar('navbar-color')
+            setSizeLogo('logo-3x')
           }
         };
         window.addEventListener("scroll", updateNavbarColor);
@@ -70,7 +71,7 @@ function Navigator(args){
     return(
         <div id="navigator">
             <Navbar className={classNames(colorNavbar)} expand="lg" fixed="top" color={colorNavbar} container={true} {...args}>
-                <NavbarBrand href="/"><img src={logo} alt="logo-helechos"/></NavbarBrand>
+                <NavbarBrand href="/"><img className={classNames(sizeLogo)} src={logo} alt="logo-helechos"/></NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav id="navigator-nav" className="ms-auto" navbar>
