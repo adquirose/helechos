@@ -10,7 +10,7 @@ import Camino from '../../assets/images/camino.png'
 function Proyecto() {
   return (
     <div id="proyecto" className="section bg-azul cd-section">
-        <Container>
+        <div className="container-lg">
             <Row className="d-flex justify-content-center">
                 <Title text="PROYECTO"/>
             </Row>
@@ -55,7 +55,7 @@ function Proyecto() {
                 <div className="d-flex justify-content-center"><img style={{width:'40px', height:'40px'}} src={AguaLuz} alt="agua-luz"/><span>FACTIBILIDAD DE LUZ Y <br/>AGUA CORRIENTE</span></div>
                 <div className="d-flex justify-content-center"><img style={{width:'40px', height:'40px'}} src={Camino} alt="camino"/><span>CAMINO <br/>ASFALTADO</span></div>
             </div>
-        </Container>
+        </div>
         
     </div>
   )

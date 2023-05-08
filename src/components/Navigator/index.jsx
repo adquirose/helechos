@@ -47,16 +47,16 @@ function Navigator(args){
     useEffect(() => {
         const updateNavbarColor = () => {
           if (
-            document.documentElement.scrollTop > 360 ||
-            document.body.scrollTop > 360
+            document.documentElement.scrollTop > 100 ||
+            document.body.scrollTop > 100
           ) {
             setLogo(LogoBlanco);
             setColorNavbar('navbar-white')
             setSizeLogo('logo-1x')
 
           } else if (
-            document.documentElement.scrollTop < 359 ||
-            document.body.scrollTop < 359
+            document.documentElement.scrollTop < 99 ||
+            document.body.scrollTop < 99
           ) {
             setLogo(LogoColor);
             setColorNavbar('navbar-color')
