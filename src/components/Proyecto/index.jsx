@@ -1,5 +1,5 @@
 import Title from "../Title"
-import { Container, Row, Col } from "reactstrap"
+import { Row, Col } from "reactstrap"
 import Comillas from '../../assets/images/comillas.png'
 import Plusvalia from '../../assets/images/plusvalia.png'
 import Parcelas from '../../assets/images/parcelas.png'

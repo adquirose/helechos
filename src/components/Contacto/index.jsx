@@ -23,7 +23,7 @@ function Contacto() {
             <Row style={{marginTop:'40px'}}>
               <Col md="6" sm="12">
                 <div>
-                  <span>¡Escribenos y <br/>te asesoramos!</span>
+                  <span>¡Escríbenos y <br/>te asesoramos!</span>
                   <div className='pt-4'>
                     <div className='pb-3 d-flex'>
                       <div style={{width:'75px', display:'flex', justifyContent:'space-between'}}>

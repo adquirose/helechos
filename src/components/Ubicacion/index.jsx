@@ -37,7 +37,7 @@ import Title from '../Title'
     return isLoaded ? (
         <GoogleMap
           mapContainerStyle={containerStyle}
-          mapType="satellite"
+          mapTypeId="satellite"
           zoom={17}
           onLoad={onLoad}
           onUnmount={onUnmount}

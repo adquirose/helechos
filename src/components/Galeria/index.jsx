@@ -99,6 +99,36 @@ const MyGallery = () => (
         <img className="image-gallery" ref={ref} onClick={open} src="https://www.lanube360.com/temp-img-helechos/images/galeria/thumb/10.jpg" />
       )}
     </Item>
+    <Item
+      original="https://www.lanube360.com/temp-img-helechos/images/galeria/11.jpg"
+      thumbnail="https://www.lanube360.com/temp-img-helechos/images/galeria/thumb/11.jpg"
+      width="1024"
+      height="576"
+    >
+      {({ ref, open }) => (
+        <img className="image-gallery" ref={ref} onClick={open} src="https://www.lanube360.com/temp-img-helechos/images/galeria/thumb/11.jpg" />
+      )}
+    </Item>
+    <Item
+      original="https://www.lanube360.com/temp-img-helechos/images/galeria/12.jpg"
+      thumbnail="https://www.lanube360.com/temp-img-helechos/images/galeria/thumb/12.jpg"
+      width="1024"
+      height="576"
+    >
+      {({ ref, open }) => (
+        <img className="image-gallery" ref={ref} onClick={open} src="https://www.lanube360.com/temp-img-helechos/images/galeria/thumb/12.jpg" />
+      )}
+    </Item>
+    <Item
+      original="https://www.lanube360.com/temp-img-helechos/images/galeria/13.jpg"
+      thumbnail="https://www.lanube360.com/temp-img-helechos/images/galeria/thumb/13.jpg"
+      width="1024"
+      height="576"
+    >
+      {({ ref, open }) => (
+        <img className="image-gallery" ref={ref} onClick={open} src="https://www.lanube360.com/temp-img-helechos/images/galeria/thumb/13.jpg" />
+      )}
+    </Item>
     </div>
   </Gallery>
 )
