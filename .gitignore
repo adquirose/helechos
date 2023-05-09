@@ -9,6 +9,7 @@ lerna-debug.log*
 
 node_modules
 material
+src/assets/images/galeria
 dist
 dist-ssr
 *.local
