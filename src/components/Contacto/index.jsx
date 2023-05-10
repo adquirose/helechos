@@ -31,7 +31,7 @@ function Contacto() {
                       </div>
                       <a href='https://api.whatsapp.com/send/?phone=56991939661'>+569 9 1939661</a>
                     </div>
-                    <div className='pb-3'><Email/><a href='mailto:contacto@bajosdeemiliana.cl'>contacto@bajosdeemiliana.cl</a></div>
+                    <div className='pb-3'><Email/><a href='mailto:contacto@bajosdeloshelechos.cl'>contacto@bajosdeloshelechos.cl</a></div>
                     <div className='pb-3'><Pin3/><a>Los Moscosos, Placilla, Colchagua.</a></div>
                   </div>
                 </div>
