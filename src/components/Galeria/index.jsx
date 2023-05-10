@@ -126,7 +126,7 @@ const MyGallery = () => (
       height="576"
     >
       {({ ref, open }) => (
-        <img className="image-gallery" ref={ref} onClick={open} src="https://www.lanube360.com/temp-helechos/images/galeria/thumb/1.jpg" />
+        <img className="image-gallery" ref={ref} onClick={open} src="https://www.lanube360.com/temp-helechos/images/galeria/thumb/13.jpg" />
       )}
     </Item>
     </div>
