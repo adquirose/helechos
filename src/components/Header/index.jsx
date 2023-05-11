@@ -1,9 +1,11 @@
 import { Container, Row, Col } from 'reactstrap';
+import Logo from '../../assets/images/logo-a.png'
 
 function Header() {
   return (
     <div className='header-container'>
       <div id="header">
+        <img className="logo" src={Logo} alt="logo"/>
         <div className="header-msg-container">
           <Container>
             <Row>

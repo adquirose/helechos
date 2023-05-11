@@ -1,16 +1,11 @@
 import { useState, useEffect } from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import { Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink } from 'reactstrap';
 import classNames from 'classnames';
-// const PATH_LOGO= 'https://www.lanube360.com/temp-img-helechos/images/logo.png'
-import LogoColor from '../../assets/images/logo.png'
-import LogoBlanco from '../../assets/images/logo-blanco.png'
 
 function Navigator(args){
     const [isOpen, setIsOpen] = useState(false);
-    const [colorNavbar, setColorNavbar] = useState('navbar-color');
-    const [logo, setLogo] = useState(LogoColor)
-    const [sizeLogo, setSizeLogo] = useState('logo-3x')
-
+    const [colorNavbar, setColorNavbar] = useState('navbar-color py-5');
+   
     const toggle = () => setIsOpen(!isOpen);
     useEffect(() => {
         const updateView = () => {
@@ -47,20 +42,15 @@ function Navigator(args){
     useEffect(() => {
         const updateNavbarColor = () => {
           if (
-            document.documentElement.scrollTop > 100 ||
-            document.body.scrollTop > 100
+            document.documentElement.scrollTop > 320 ||
+            document.body.scrollTop > 320
           ) {
-            setLogo(LogoBlanco);
-            setColorNavbar('navbar-white')
-            setSizeLogo('logo-1x')
-
+            setColorNavbar('navbar-white py-2' )
           } else if (
-            document.documentElement.scrollTop < 99 ||
-            document.body.scrollTop < 99
+            document.documentElement.scrollTop < 319 ||
+            document.body.scrollTop < 319
           ) {
-            setLogo(LogoColor);
-            setColorNavbar('navbar-color')
-            setSizeLogo('logo-3x')
+            setColorNavbar('navbar-color py-2 py-md-5')
           }
         };
         window.addEventListener("scroll", updateNavbarColor);
@@ -71,30 +61,29 @@ function Navigator(args){
     return(
         <div id="navigator">
             <Navbar className={classNames(colorNavbar)} expand="lg" fixed="top" color={colorNavbar} container={true} {...args}>
-                <NavbarBrand href="/"><img className={classNames(sizeLogo)} src={logo} alt="logo-helechos"/></NavbarBrand>
-                <NavbarToggler onClick={toggle} />
+                <NavbarToggler onClick={toggle} className='me-2 ms-auto' />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav id="navigator-nav" className="ms-auto" navbar>
                         <NavItem>
-                            <NavLink data-number="1" href="#proyecto">PROYECTO</NavLink>
+                            <NavLink onClick={toggle} data-number="1" href="#proyecto">PROYECTO</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink data-number="2" href="#masterplan">
+                            <NavLink onClick={toggle} data-number="2" href="#masterplan">
                                 MASTERPLAN360
                             </NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink data-number="3" href="#galeria">
+                            <NavLink onClick={toggle} data-number="3" href="#galeria">
                                 GALERÍA
                             </NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink data-number="4" href="#ubicacion">
+                            <NavLink onClick={toggle} data-number="4" href="#ubicacion">
                                 UBICACIÓN
                             </NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink data-number="5" href="#contacto">
+                            <NavLink onClick={toggle} data-number="5" href="#contacto">
                                 CONTACTO
                             </NavLink>
                         </NavItem>

@@ -58,7 +58,7 @@ function Ubicacion() {
                 <MyMap/>
             </Row>
             <div className='d-flex justify-content-center pb-5'>
-                <button>DESCARGAR PLANO</button>
+                <button onClick={() => window.open('./assets/plano.pdf', '_blank')}>DESCARGAR PLANO</button>
             </div>
         </Container>
     </div>

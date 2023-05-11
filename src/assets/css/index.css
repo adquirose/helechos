@@ -71,7 +71,7 @@ body {
   left: 0;
   right: 0;
   margin: auto;
-  background-image: url('https://www.lanube360.com/temp-helechos/images/header.jpg');
+  background-image: url('../images/header.jpg');
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -105,6 +105,10 @@ body {
   position:absolute;
   bottom:200px;
   width:100%;
+}
+#header .logo{
+  width: 400px;
+  padding-left: 10%;
 }
 #navigator a{
   color:var(--color-white);
@@ -270,8 +274,15 @@ body {
     bottom:100px;
     width:100%;
   }
-  .logo-grande{
-    width: 250px;
+  #header .logo{
+    width: 360px;
+    padding-left: 7.0rem;
+  }
+}
+@media(max-width:768px){
+  #header .logo{
+    width: 320px;
+    padding-left: 3.75rem;
   }
 }
 @media (max-width: 420px) {
@@ -289,6 +300,10 @@ body {
     position:absolute;
     bottom:50px;
     width:100%;
+  }
+  #header .logo{
+    width: 260px;
+    padding-left: 0.75rem;
   }
   .logo-1x{
     width: 100px;

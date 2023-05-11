@@ -1,14 +1,82 @@
+import { useState } from 'react'
 import { Container, Row, Col} from 'reactstrap'
 import Title from '../Title'
 import { Phone, LogoWhatsapp, Email, Pin3 } from '../Icons'
+import axios from 'axios'
+
+const INITIAL_STATE = {
+  nombre:'',
+  email:'',
+  mensaje:''
+}
+
 function Formulario(){
+  const [data, setData] = useState(INITIAL_STATE)
+  const [isLoading, setIsLoading] = useState(false)
+  const handleOnChange = event => {
+    event.preventDefault()
+    setData({...data, [event.target.name]: event.target.value})
+  }
+  const handleOnSubmit = (event) => {
+    event.preventDefault();
+		const { nombre, email, mensaje } = data 
+		const message = `
+			Nombre: ${nombre} 
+			Email: ${email} 
+			Mensaje: ${mensaje}
+    `
+    const info = {
+      to:'contacto@bajosdeloshelechos.cl',
+      replyTo: email,
+      subject:'Formulario Contacto',
+      text: message
+    }
+
+		setIsLoading(true)
+		axios.post('https://us-central1-firemailer.cloudfunctions.net/submitContactoFZ',info)
+			.then(res => {
+				console.log(`mensaje enviado: ${res.data.isEmailSend}`)
+				setIsLoading(false)
+			})
+			.catch(error => console.log(`ha ocurrido un error ${error}`))
+		setData(INITIAL_STATE)
+	};
+  const { nombre, email, mensaje } = data
+  const isDisabled = nombre === '' || email === '' 
+
   return(
-    <form>
-      <input name="name" placeholder="NOMBRE" type="text"/>
-      <input name="email" placeholder="MAIL" type="email"/>
-      <textarea name="mensaje" placeholder="MENSAJE" type="textarea"/>
+    <form onSubmit={handleOnSubmit}>
+      <input 
+        name="nombre" 
+        placeholder="NOMBRE" 
+        type="text"
+        value={nombre}
+        onChange={handleOnChange}
+      />
+      <input 
+        name="email" 
+        placeholder="MAIL" 
+        type="email"
+        value={email}
+        onChange={handleOnChange}
+      />
+      <textarea 
+        name="mensaje" 
+        placeholder="MENSAJE" 
+        type="textarea"
+        value={mensaje}
+        onChange={handleOnChange}
+      />
       <div className='d-flex justify-content-end'>
-        <button>ENVIAR</button>
+        {isLoading ? 
+          <span style={{fontSize:'16px'}}>Enviando...</span> :
+          <button
+            type="submit"
+            disabled={isDisabled}
+          >
+            Enviar
+          </button>
+      }
       </div>
     </form>
   )
