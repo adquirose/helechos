@@ -60,7 +60,7 @@ function Navigator(args){
       });
     return(
         <div id="navigator">
-            <Navbar className={classNames(colorNavbar)} expand="lg" fixed="top" color={colorNavbar} container={true} {...args}>
+            <Navbar className={classNames(colorNavbar)} expand="md" fixed="top" color={colorNavbar} container={true} {...args}>
                 <NavbarToggler onClick={toggle} className='me-2 ms-auto' />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav id="navigator-nav" className="ms-auto" navbar>
